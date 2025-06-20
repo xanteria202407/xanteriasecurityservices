@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="tab.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xanteria Security Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #1a1a2e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    header img {
+      max-width: 300px;
+      height: auto;
+    }
+    header p {
+      font-style: italic;
+      color: #aaa;
+      margin-top: 10px;
+    }
+    .auth-buttons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .auth-buttons button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #1a1a2e;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .auth-buttons button:hover {
+      background-color: #ccc;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .service-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .service-card h3 {
+      margin-top: 0;
+      color: #1a1a2e;
+    }
+    .service-card p {
+      font-size: 0.95em;
+      color: #555;
+    }
+    .service-card .price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #1a1a2e;
+    }
+    .purchase-btn {
+      margin-top: 15px;
+      background-color: #1a1a2e;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .founder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+    .founder img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .founder-text {
+      max-width: 600px;
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    .founder-name {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .pmc-gallery {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      margin-top: 60px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .pmc-item {
+      flex: 1 1 30%;
+      text-align: center;
+    }
+    .pmc-item img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .pmc-item p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .enlistment {
+      margin-top: 80px;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      color: #333;
+      text-align: center;
+    }
+    .enlistment h2 {
+      margin-bottom: 10px;
+      font-size: 2em;
+      color: #1a1a2e;
+    }
+    .enlistment p.subtitle {
+      margin-top: 0;
+      color: #555;
+      font-style: italic;
+      font-size: 1.2em;
+      margin-bottom: 25px;
+    }
+    .enlistment ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 30px auto;
+      max-width: 600px;
+      text-align: left;
+    }
+    .enlistment ul li {
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      border-left: 5px solid #1a1a2e;
+      border-radius: 4px;
+      color: #333;
+    }
+    .enlist-btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #1a1a2e;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .enlist-btn:hover {
+      background-color: #333;
+    }
+    footer {
+      background-color: #1a1a2e;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="auth-buttons">
+      <button onclick="location.href='login.html'">Login</button>
+      <button onclick="location.href='signup.html'">Sign Up</button>
+    </div>
+    <img src="logo.png" alt="Xanteria Security Services Logo">
+    <p>"With Xanteria near, there's nothing to fear – safety and trust all through the year."</p>
+  </header>
+
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Security Guards</h3>
+        <p>Trained personnel for residential, commercial, or event security.</p>
+        <p class="price">₱15,000 / month</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+      <div class="service-card">
+        <h3>24/7 Surveillance Systems</h3>
+        <p>High-definition CCTV systems with remote access and motion detection.</p>
+        <p class="price">₱25,000 - ₱50,000</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+      <div class="service-card">
+        <h3>Drone Monitoring</h3>
+        <p>Advanced aerial surveillance for large areas and events.</p>
+        <p class="price">₱8,000 / deployment</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+      <div class="service-card">
+        <h3>Mobile Patrol Units</h3>
+        <p>Motorized patrols for neighborhoods, compounds, and properties.</p>
+        <p class="price">₱18,000 / month</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+      <div class="service-card">
+        <h3>Access Control Systems</h3>
+        <p>Secure card and biometric access for buildings and gated communities.</p>
+        <p class="price">₱30,000 - ₱60,000</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+      <div class="service-card">
+        <h3>Alarm Systems</h3>
+        <p>Intrusion and fire alarms to protect your premises 24/7.</p>
+        <p class="price">₱20,000 - ₱35,000</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+      <div class="service-card">
+        <h3>Bodyguard Services</h3>
+        <p>Personal protection for VIPs, executives, and public figures.</p>
+        <p class="price">₱2,500 / hour</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+      <div class="service-card">
+        <h3>Event Security</h3>
+        <p>Full-service event protection including crowd control and screening.</p>
+        <p class="price">₱10,000 - ₱50,000</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+      <div class="service-card">
+        <h3>K9 Detection Units</h3>
+        <p>Trained dogs for explosives, narcotics, and security patrols.</p>
+        <p class="price">₱25,000 / event</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+      <div class="service-card">
+        <h3>Remote Monitoring Services</h3>
+        <p>Real-time camera feed monitoring with incident alerts.</p>
+        <p class="price">₱5,000 / month</p>
+        <a href="login.html" class="purchase-btn">Purchase</a>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 60px;">Personnel Showcase</h2>
+    <div class="pmc-gallery">
+      <div class="pmc-item">
+        <img src="pmc.jpg" alt="PMC Contractor">
+        <p>Private Military Contractor</p>
+      </div>
+      <div class="pmc-item">
+        <img src="tactical.jpg" alt="Tactical Operator">
+        <p>Tactical Operator</p>
+      </div>
+      <div class="pmc-item">
+        <img src="security-guard.jpg" alt="Security Guard">
+        <p>Security Guard</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 60px; text-align: center;">Founder</h2>
+    <div class="founder">
+      <div>
+        <img src="founder.png" alt="Founder Photo">
+        <p class="founder-name">Johnvert E. Ocbeña</p>
+      </div>
+      <div class="founder-text">
+        "At Xanteria, we don't just protect — we empower safety and peace of mind for every client we serve."
+      </div>
+    </div>
+
+    <div class="enlistment">
+      <h2>Join Our Team</h2>
+      <p class="subtitle">Become a part of Xanteria's elite protection force.</p>
+      <ul>
+        <li>At least 21 years old</li>
+        <li>High school graduate (college level preferred)</li>
+        <li>Physically fit and mentally alert</li>
+        <li>With or without security experience (training provided)</li>
+        <li>Clean police and NBI record</li>
+        <li>Willing to work flexible shifts and assignments</li>
+      </ul>
+      <a href="enlist.html" class="enlist-btn">Enlist Now</a>
+    </div>
+  </div>
+
+  <footer>
+    <h3>About Us</h3>
+    <p>Xanteria Security Services is committed to delivering professional protection, surveillance, and peace of mind to our clients. Our team is made up of trained personnel equipped with the latest technology and field experience. Whether it’s personal, commercial, or event security, we stand ready to serve.</p>
+    <p>📧 Contact us: <a href="mailto:xanteria2024@gmail.com" style="color: #fff; text-decoration: underline;">xanteria2024@gmail.com</a></p>
+    <p>&copy; 2025 Xanteria Security Services. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
